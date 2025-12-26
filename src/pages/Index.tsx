@@ -33,10 +33,12 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-sm shadow-lg">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3 animate-fade-in-left">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-2xl">🏀</span>
-            </div>
-            <span className="text-2xl font-bold text-white">HOOP MASTERS</span>
+            <img 
+              src="https://cdn.poehali.dev/files/image.png" 
+              alt="Slim Reaper Logo" 
+              className="w-12 h-12 object-cover rounded-full"
+            />
+            <span className="text-2xl font-bold text-white">SLIM REAPER</span>
           </div>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection('home')} className="text-white hover:text-primary transition-colors">Главная</button>
@@ -56,15 +58,15 @@ export default function Index() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ТВОЯ ДОРОГА К <span className="text-primary">ПОБЕДЕ</span>
+              SLIM REAPER
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Профессиональная баскетбольная академия для детей и взрослых. 
-              Раскрой свой потенциал вместе с лучшими тренерами!
+              Здоровое азиатское питание для активного образа жизни. 
+              Вкусные диетические блюда с доставкой!
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button onClick={() => scrollToSection('contact')} size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 animate-scale-in">
-                Записаться на тренировку
+                Заказать доставку
               </Button>
               <Button onClick={() => scrollToSection('services')} size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-secondary text-lg px-8 py-6 animate-scale-in">
                 Узнать больше
@@ -79,16 +81,16 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
             <h2 className="text-5xl font-bold text-secondary mb-6">О нас</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              HOOP MASTERS — это современная баскетбольная академия с 10-летним опытом. 
-              Мы готовим чемпионов и помогаем каждому раскрыть свой потенциал. 
-              Наши воспитанники играют в профессиональных лигах и сборных команд.
+              SLIM REAPER — это сервис доставки здорового азиатского питания. 
+              Мы создаём сбалансированные блюда с минимумом калорий и максимумом пользы. 
+              Наша философия: вкусно, полезно, удобно!
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: 'Trophy', title: '50+ наград', desc: 'Наши команды — победители региональных и национальных турниров' },
-              { icon: 'Users', title: '500+ учеников', desc: 'Тренируем детей и взрослых всех уровней подготовки' },
-              { icon: 'Target', title: '10 лет опыта', desc: 'Проверенная методика и профессиональные тренеры' }
+              { icon: 'Leaf', title: 'Натуральные продукты', desc: 'Только свежие овощи, качественное мясо и морепродукты' },
+              { icon: 'Users', title: '2000+ клиентов', desc: 'Доверяют нам своё здоровье и выбирают нас каждый день' },
+              { icon: 'Clock', title: 'Быстрая доставка', desc: 'Привезём горячие блюда за 30-60 минут' }
             ].map((item, idx) => (
               <Card key={idx} className="border-2 hover:border-primary transition-all hover:shadow-xl animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-8 text-center">
@@ -115,26 +117,26 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                title: 'Групповые тренировки',
-                price: '3 500 ₽',
-                period: 'в месяц',
-                features: ['8 занятий в месяц', 'Группы до 12 человек', 'Все уровни подготовки', 'Игровая практика'],
-                icon: 'Users'
+                title: 'Разовый заказ',
+                price: '450 ₽',
+                period: 'за блюдо',
+                features: ['Свободный выбор', 'Любое количество', 'Без обязательств', 'Пробуй новое'],
+                icon: 'ShoppingBag'
               },
               {
-                title: 'Индивидуальные занятия',
-                price: '2 000 ₽',
-                period: 'за занятие',
-                features: ['Персональный подход', 'Гибкое расписание', 'Быстрый прогресс', 'Работа над техникой'],
-                icon: 'User',
+                title: 'Недельная программа',
+                price: '2 800 ₽',
+                period: 'на 7 дней',
+                features: ['Полноценный рацион', 'Завтрак, обед, ужин', 'Готовое меню', 'Экономия 15%'],
+                icon: 'Calendar',
                 featured: true
               },
               {
-                title: 'Летний лагерь',
-                price: '25 000 ₽',
-                period: 'за смену',
-                features: ['2 недели интенсива', 'Проживание и питание', 'Мастер-классы', 'Турниры и призы'],
-                icon: 'Flame'
+                title: 'Месячная подписка',
+                price: '9 900 ₽',
+                period: 'на 30 дней',
+                features: ['Персональное меню', 'Скидка 25%', 'Бесплатная доставка', 'Консультация диетолога'],
+                icon: 'Star'
               }
             ].map((service, idx) => (
               <Card 
@@ -165,7 +167,7 @@ export default function Index() {
                     ))}
                   </ul>
                   <Button onClick={() => scrollToSection('contact')} className="w-full bg-primary hover:bg-primary/90" size="lg">
-                    Записаться
+                    Оформить
                   </Button>
                 </CardContent>
               </Card>
@@ -177,48 +179,48 @@ export default function Index() {
       <section id="team" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-secondary mb-6">Наша команда</h2>
+            <h2 className="text-5xl font-bold text-secondary mb-6">Наши блюда</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Профессиональные тренеры с международным опытом
+              Попробуйте самые популярные позиции меню
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: 'Алексей Волков',
-                role: 'Главный тренер',
-                experience: '15 лет опыта',
-                achievements: 'Мастер спорта, тренер сборной России U-18',
-                emoji: '👨‍🏫'
+                name: 'Фунчоза с овощами',
+                role: '280 ккал',
+                experience: 'Рисовая лапша',
+                achievements: 'Морковь, огурец, перец, соус соевый-кунжутный',
+                emoji: '🍜'
               },
               {
-                name: 'Мария Соколова',
-                role: 'Тренер по технике',
-                experience: '12 лет опыта',
-                achievements: 'ЗМС, бронзовый призёр Чемпионата Европы',
-                emoji: '👩‍🏫'
+                name: 'Куриная грудка терияки',
+                role: '320 ккал',
+                experience: 'Нежное куриное филе',
+                achievements: 'Рис басмати, овощи на пару, соус терияки',
+                emoji: '🍗'
               },
               {
-                name: 'Дмитрий Орлов',
-                role: 'Тренер молодежи',
-                experience: '8 лет опыта',
-                achievements: 'КМС, специалист по развитию юных игроков',
-                emoji: '🧑‍🏫'
+                name: 'Поке с лососем',
+                role: '380 ккал',
+                experience: 'Свежий лосось',
+                achievements: 'Рис, авокадо, эдамаме, огурец, кунжут, спайси',
+                emoji: '🥗'
               }
-            ].map((coach, idx) => (
+            ].map((dish, idx) => (
               <Card key={idx} className="border-2 hover:border-primary transition-all hover:shadow-xl animate-fade-in group" style={{ animationDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-8 text-center">
                   <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">
-                    {coach.emoji}
+                    {dish.emoji}
                   </div>
-                  <h3 className="text-2xl font-bold text-secondary mb-2">{coach.name}</h3>
-                  <p className="text-primary font-semibold mb-3">{coach.role}</p>
+                  <h3 className="text-2xl font-bold text-secondary mb-2">{dish.name}</h3>
+                  <p className="text-primary font-semibold mb-3 text-lg">{dish.role}</p>
                   <div className="space-y-2 text-muted-foreground">
                     <p className="flex items-center justify-center gap-2">
-                      <Icon name="Award" size={16} />
-                      {coach.experience}
+                      <Icon name="UtensilsCrossed" size={16} />
+                      {dish.experience}
                     </p>
-                    <p className="text-sm">{coach.achievements}</p>
+                    <p className="text-sm">{dish.achievements}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -230,7 +232,7 @@ export default function Index() {
       <section id="contact" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-secondary mb-6">Обратная связь</h2>
+            <h2 className="text-5xl font-bold text-secondary mb-6">Свяжитесь с нами</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Заполните форму, и мы свяжемся с вами в течение 24 часов
             </p>
@@ -300,7 +302,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="font-semibold text-secondary">Адрес</p>
-                        <p className="text-muted-foreground">г. Москва, ул. Спортивная, 15</p>
+                        <p className="text-muted-foreground">г. Москва, ул. Ленинградская, 32</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -309,7 +311,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="font-semibold text-secondary">Телефон</p>
-                        <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                        <p className="text-muted-foreground">+7 (495) 888-99-00</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -318,7 +320,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="font-semibold text-secondary">Email</p>
-                        <p className="text-muted-foreground">info@hoopmasters.ru</p>
+                        <p className="text-muted-foreground">hello@slimreaper.ru</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -326,8 +328,8 @@ export default function Index() {
                         <Icon name="Clock" className="text-primary" size={20} />
                       </div>
                       <div>
-                        <p className="font-semibold text-secondary">Режим работы</p>
-                        <p className="text-muted-foreground">Пн-Пт: 09:00 - 21:00<br />Сб-Вс: 10:00 - 18:00</p>
+                        <p className="font-semibold text-secondary">Режим доставки</p>
+                        <p className="text-muted-foreground">Ежедневно: 9:00 - 23:00</p>
                       </div>
                     </div>
                   </div>
@@ -358,13 +360,15 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-xl">🏀</span>
-                </div>
-                <span className="text-xl font-bold">HOOP MASTERS</span>
+                <img 
+                  src="https://cdn.poehali.dev/files/image.png" 
+                  alt="Slim Reaper Logo" 
+                  className="w-10 h-10 object-cover rounded-full"
+                />
+                <span className="text-xl font-bold">SLIM REAPER</span>
               </div>
               <p className="text-white/80">
-                Профессиональная баскетбольная академия для всех возрастов
+                Здоровое азиатское питание с доставкой по Москве
               </p>
             </div>
             <div>
