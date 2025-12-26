@@ -179,48 +179,48 @@ export default function Index() {
       <section id="team" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-secondary mb-6">Наши блюда</h2>
+            <h2 className="text-5xl font-bold text-secondary mb-6">Наша команда</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Попробуйте самые популярные позиции меню
+              Профессиональные тренеры с международным опытом
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: 'Фунчоза с овощами',
-                role: '280 ккал',
-                experience: 'Рисовая лапша',
-                achievements: 'Морковь, огурец, перец, соус соевый-кунжутный',
-                emoji: '🍜'
+                name: 'Алексей Волков',
+                role: 'Главный тренер',
+                experience: '15 лет опыта',
+                achievements: 'Мастер спорта, тренер сборной России U-18',
+                emoji: '👨‍🏫'
               },
               {
-                name: 'Куриная грудка терияки',
-                role: '320 ккал',
-                experience: 'Нежное куриное филе',
-                achievements: 'Рис басмати, овощи на пару, соус терияки',
-                emoji: '🍗'
+                name: 'Мария Соколова',
+                role: 'Тренер по технике',
+                experience: '12 лет опыта',
+                achievements: 'ЗМС, бронзовый призёр Чемпионата Европы',
+                emoji: '👩‍🏫'
               },
               {
-                name: 'Поке с лососем',
-                role: '380 ккал',
-                experience: 'Свежий лосось',
-                achievements: 'Рис, авокадо, эдамаме, огурец, кунжут, спайси',
-                emoji: '🥗'
+                name: 'Дмитрий Орлов',
+                role: 'Тренер молодежи',
+                experience: '8 лет опыта',
+                achievements: 'КМС, специалист по развитию юных игроков',
+                emoji: '🧑‍🏫'
               }
-            ].map((dish, idx) => (
+            ].map((coach, idx) => (
               <Card key={idx} className="border-2 hover:border-primary transition-all hover:shadow-xl animate-fade-in group" style={{ animationDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-8 text-center">
                   <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">
-                    {dish.emoji}
+                    {coach.emoji}
                   </div>
-                  <h3 className="text-2xl font-bold text-secondary mb-2">{dish.name}</h3>
-                  <p className="text-primary font-semibold mb-3 text-lg">{dish.role}</p>
+                  <h3 className="text-2xl font-bold text-secondary mb-2">{coach.name}</h3>
+                  <p className="text-primary font-semibold mb-3">{coach.role}</p>
                   <div className="space-y-2 text-muted-foreground">
                     <p className="flex items-center justify-center gap-2">
-                      <Icon name="UtensilsCrossed" size={16} />
-                      {dish.experience}
+                      <Icon name="Award" size={16} />
+                      {coach.experience}
                     </p>
-                    <p className="text-sm">{dish.achievements}</p>
+                    <p className="text-sm">{coach.achievements}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -232,7 +232,7 @@ export default function Index() {
       <section id="contact" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-secondary mb-6">Свяжитесь с нами</h2>
+            <h2 className="text-5xl font-bold text-secondary mb-6">Обратная связь</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Заполните форму, и мы свяжемся с вами в течение 24 часов
             </p>
@@ -302,7 +302,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="font-semibold text-secondary">Адрес</p>
-                        <p className="text-muted-foreground">г. Москва, ул. Ленинградская, 32</p>
+                        <p className="text-muted-foreground">г. Москва, ул. Спортивная, 15</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -311,7 +311,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="font-semibold text-secondary">Телефон</p>
-                        <p className="text-muted-foreground">+7 (495) 888-99-00</p>
+                        <p className="text-muted-foreground">+7 (495) 123-45-67</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -320,7 +320,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="font-semibold text-secondary">Email</p>
-                        <p className="text-muted-foreground">hello@slimreaper.ru</p>
+                        <p className="text-muted-foreground">info@hoopmasters.ru</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -328,8 +328,8 @@ export default function Index() {
                         <Icon name="Clock" className="text-primary" size={20} />
                       </div>
                       <div>
-                        <p className="font-semibold text-secondary">Режим доставки</p>
-                        <p className="text-muted-foreground">Ежедневно: 9:00 - 23:00</p>
+                        <p className="font-semibold text-secondary">Режим работы</p>
+                        <p className="text-muted-foreground">Пн-Пт: 09:00 - 21:00<br />Сб-Вс: 10:00 - 18:00</p>
                       </div>
                     </div>
                   </div>
@@ -360,15 +360,13 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img 
-                  src="https://cdn.poehali.dev/files/image.png" 
-                  alt="Slim Reaper Logo" 
-                  className="w-10 h-10 object-cover rounded-full"
-                />
+                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                  <span className="text-xl">🏀</span>
+                </div>
                 <span className="text-xl font-bold">SLIM REAPER</span>
               </div>
               <p className="text-white/80">
-                Здоровое азиатское питание с доставкой по Москве
+                Профессиональная баскетбольная академия для всех возрастов
               </p>
             </div>
             <div>
